@@ -23,6 +23,11 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+//GCHLOL - additional modules
+$string['facetoface'] = 'Face to Face';
+$string['inservice'] = 'Inservice';
+$string['checklist'] = 'Checklist';
+
 // Module names.
 $string['aspirelist'] = 'Aspire resource list';
 $string['assign'] = 'Assignment';

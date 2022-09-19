@@ -1063,6 +1063,48 @@ function block_progress_monitorable_modules() {
             'defaultAction' => 'graded',
             'showsubmittedfirst' => true,
         ),
+        
+        // GCHLOL - PB - include F2F
+        'facetoface' => array(
+            'actions' => array(
+                'viewed' => "SELECT id
+                               FROM {log}
+                              WHERE course = :courseid
+                                    AND module = 'facetoface'
+                                    AND action = 'view'
+                                    AND cmid   = :cmid
+                                    AND userid = :userid"
+            ),
+            'defaultAction' => 'activity_completion'
+        ),
+
+        // GCHLOL - MF - include Inservice
+        'inservice' => array(
+            'actions' => array(
+                'viewed' => "SELECT id
+                               FROM {log}
+                              WHERE course = :courseid
+                                    AND module = 'inservice'
+                                    AND action = 'view'
+                                    AND cmid   = :cmid
+                                    AND userid = :userid"
+            ),
+            'defaultAction' => 'activity_completion'
+        ),
+		
+        // GCHLOL - MF - include Checklist
+        'checklist' => array(
+            'actions' => array(
+                'viewed' => "SELECT id
+                               FROM {log}
+                              WHERE course = :courseid
+                                    AND module = 'checklist'
+                                    AND action = 'view'
+                                    AND cmid   = :cmid
+                                    AND userid = :userid"
+            ),
+            'defaultAction' => 'activity_completion'
+        ),
     );
 
     if ($CFG->version >= 2014072400) {
